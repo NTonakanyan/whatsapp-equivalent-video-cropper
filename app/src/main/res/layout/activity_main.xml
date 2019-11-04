@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/activity_main_player"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:resize_mode="fixed_height"
+        app:surface_type="texture_view"
+        app:use_controller="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.videotrimmerapplication.videoTrimmer.VideoTrimSeekBar
+        android:id="@+id/activity_main_video_trim_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:clickable="false"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_player" />
+
+    <TextView
+        android:id="@+id/activity_main_video_trim_seek_bar_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_video_trim_seek_bar" />
+
+
+    <Button
+        android:id="@+id/activity_main_video_cut_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_video_trim_seek_bar_start_end" />
+
+   <Button
+        android:id="@+id/activity_main_select_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_video_cut_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
